@@ -1,0 +1,61 @@
+/* LineEditorForm.css */
+.form-container {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.form-container h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #333;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+input[type="number"]:read-only {
+  background-color: #eee;
+  color: #555;
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f8f9fa;
+}
+
+.btn:hover {
+  background-color: #e9ecef;
+}
+
+.btn-outline-dark {
+  transition: all 0.2s;
+}
+
+.btn-outline-dark:hover {
+  background-color: #343a40;
+  color: #fff;
+}

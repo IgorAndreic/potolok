@@ -1,0 +1,83 @@
+.modal-overlay {
+ 
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  z-index: 1050;
+  overflow: hidden;
+}
+
+.modal-container {
+  background: white;
+  border-radius: .3rem;
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .5);
+  width: 80%;
+  max-width: 300px;
+  padding: 1rem;
+  overflow-y: auto;
+  position: fixed;
+  top: 20px; /* Отступ сверху */
+  right: 20px; /* Отступ справа */
+  z-index: 1050; /* Установите z-index по вашему усмотрению */
+  transition: right 0.3s ease-in-out; /* Плавное появление */
+}
+
+.close-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  border: none;
+  background: none;
+  color: #aaa;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  color: #777;
+}
+
+.modal-container input[type="text"] {
+  width: 90%;
+  padding: .375rem .75rem;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.modal-container button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: .25rem;
+  padding: .375rem .75rem;
+  cursor: pointer;
+  transition: background-color .15s ease-in-out;
+}
+
+.modal-container button:hover {
+  background-color: #0056b3;
+}
+
+.modal-container .scheme-list-item {
+  cursor: pointer; /* При наведении курсор будет в форме указательной руки */
+}
+
+.modal-handle {
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-top-left-radius: .3rem;
+  border-top-right-radius: .3rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}

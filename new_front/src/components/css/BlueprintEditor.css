@@ -1,0 +1,47 @@
+.container-fluid {
+  padding: 20px;
+  display: flex; 
+  flex-wrap: wrap;
+  min-height: 100vh;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.editor-sidebar {
+  padding: 15px;
+  border-right: 1px solid #dee2e6;
+  overflow-y: auto;
+  position: absolute;
+  left: 0;
+  width: 160px;
+}
+
+.toolbar-container {
+  margin-top: 20px;
+}
+
+.drawing-stage-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 5px #ccc;
+  background-color: #f0f0f0;
+  overflow: hidden;
+}
+
+.d-flex.justify-content-center.mb-3 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.btn-outline-dark {
+  transition: all 0.2s;
+}
+
+.btn-outline-dark:hover {
+  background-color: #343a40;
+  color: #fff;
+}
