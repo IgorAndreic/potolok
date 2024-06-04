@@ -33,7 +33,7 @@ SECRET_KEY = 'django-insecure-nr=yrid*(yzt(*o+1bfr=a4vpg&6550_hua2!h&yffi8hj@%=3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '45.9.42.91']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '31.128.32.220']
 
 
 # Application definition
@@ -89,7 +89,7 @@ WSGI_APPLICATION = 'profil.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'profildb',
+        'NAME': 'potolokdb',
         'USER': 'userdb',
         'PASSWORD': '12345',
         'HOST': 'localhost',
@@ -140,6 +140,6 @@ CORS_ALLOW_ALL_ORIGINS = True
 
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',  # React app
-    'http://45.9.42.91',      # Там, где размещен фронтенд
+    'http://31.128.32.220',      # Там, где размещен фронтенд
 ]
 
