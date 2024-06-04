@@ -3,7 +3,7 @@ import './css/LineTree.css'; // Подключаем файл со стилям�
 
 const LineTree = ({ lines, onSelectLine }) => {
   if (!lines || lines.length === 0) {
-    return <div><h5 style={{textAlign: 'center'}}>Нет линий</h5></div>;
+    return <div><h5 style={{textAlign: 'center'}}>Начни замер</h5></div>;
   }
 
   return (
@@ -12,7 +12,7 @@ const LineTree = ({ lines, onSelectLine }) => {
       <ul className="line-list"> {/* Применяем стиль к списку */}
         {lines.filter(line => line.points.length <= 4).map((line, index) => (
           <li key={index} className="line-list-item" onClick={() => onSelectLine(line, index)}> {/* Применяем стиль к элементам списка */}
-            <div>Линия : {index + 1}</div>
+            <div> {String.fromCharCode(65 + index)}</div> {/* Преобразовываем индекс в латинскую букву */}
           </li>
         ))}
       </ul>
