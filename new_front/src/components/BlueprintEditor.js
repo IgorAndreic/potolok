@@ -207,7 +207,9 @@ const handleDeleteLine = (index) => {
             setLines={setLines}
             setShapes={setShapes} 
           />  
-              <Link to="/" className="btn btn-outline-dark mx-1">На главную</Link>
+              <Link to="/" className="btn btn-outline-dark mx-1">
+              <img src="icons/home.svg" alt="Открыть" />
+              </Link>
         </div>
         <div className="col-10">
           <DrawingStage
