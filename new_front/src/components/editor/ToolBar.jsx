@@ -10,9 +10,21 @@ const ToolBar = ({ lines, shapes, folderId, setIsLoaderModalOpen, blueprintId, b
 
     return (
         <>
-            <button className="btn btn-outline-dark mx-1" onClick={handleOpenClick}>Открыть</button>
-            <UpdateButton folderId={folderId} blueprintId={blueprintId} blueprintName={blueprintName} lines={lines} shapes={shapes} />
-            <SaveButton lines={lines} shapes={shapes} folderId={folderId} />
+            <button className="btn btn-outline-dark mx-1" onClick={handleOpenClick}>
+                <img src="icons/file_open.svg" alt="Открыть" />
+                </button>
+            <UpdateButton 
+                folderId={folderId} 
+                blueprintId={blueprintId}
+                blueprintName={blueprintName} 
+                lines={lines} 
+                shapes={shapes} 
+            />
+            <SaveButton 
+                lines={lines} 
+                shapes={shapes} 
+                folderId={folderId} 
+            />
         </>
     );
 };

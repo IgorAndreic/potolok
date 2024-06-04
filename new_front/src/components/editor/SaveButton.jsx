@@ -69,7 +69,9 @@ const SaveButton = ({ lines, shapes, folderId }) => {
 
     return (
         <>
-            <button className="btn btn-outline-dark mx-1" onClick={handleSaveClick}>Сохранить как...</button>
+            <button className="btn btn-outline-dark mx-1" onClick={handleSaveClick}>
+              <img src="icons/save_as.svg" alt="Открыть" /> 
+            </button>
             {isModalOpen && (
                 <Modal isOpen={isModalOpen} onClose={() => {
                     console.log("Closing modal.");

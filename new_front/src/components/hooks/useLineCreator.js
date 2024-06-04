@@ -72,7 +72,8 @@ function useLineCreator(_stageRef) {
             const angle = calculateAngle(currentLine[0], currentLine[1], x, y);
 
             let textAngle = 0;
-            
+            let index = lines.indexOf(currentLine);
+        if (index !== -1) {
             let newLine = {
                 points: [currentLine[0], currentLine[1], x, y],
                 length,
@@ -80,13 +81,14 @@ function useLineCreator(_stageRef) {
                 angle,
                 anglemin: textAngle,
                 editable: false,
-                text: `${Math.round(length)}`,
-                textX: (currentLine[0] + x) / 2,
-                textY: (currentLine[1] + y) / 2 - 10,
+                text: String.fromCharCode(65 + index),
+                textX: currentLine[0],
+                textY: currentLine[1] - 10,
                 textAngle: textAngle, 
                 textAngleX: currentLine[0] - 20,
                 textAngleY: currentLine[1],
             };
+       
     
             let newLines = [...lines, newLine];
             const snapResult = snapLines (newLines, 20);
@@ -97,6 +99,8 @@ function useLineCreator(_stageRef) {
             setLines(newLines);
             setCurrentLine([]);
             setDrawing(false);
+
+          }
         }
     };
 

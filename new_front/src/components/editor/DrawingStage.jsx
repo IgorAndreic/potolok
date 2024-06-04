@@ -239,7 +239,7 @@ const DrawingStage = ({
                 <Text
                   x={line.textX}
                   y={line.textY} // Чуть выше середины линии
-                  text={length > lengthmin ? `${Math.round(lengthmin)} - ${Math.round(length)}` : `${Math.round(length)}`}
+                  text={line.text}
                   fontSize={15}
                   fill={length > lengthmin ? "black" : "red"} // Красный шрифт, если условие true
                   draggable

@@ -166,9 +166,13 @@ const handleDeleteLine = (index) => {
             setAngleType={setAngleType}
             angleType={angleType}
             /> 
-          <button className="btn btn-outline-dark " onClick={handleAddArrow}>Стрелка</button>
+          <button className="btn btn-outline-dark " onClick={handleAddArrow}>
+          <img src="icons/arrow_forward.svg" alt="Открыть" />
+          </button>
           {hasArrows && (
-          <button className="btn btn-outline-dark " onClick={handleDeleteArrow}>Удалить</button>
+          <button className="btn btn-outline-dark " onClick={handleDeleteArrow}>
+            <img src="icons/delete.svg" alt="Открыть" />
+          </button>
           )}
           {selectedLine && (
             <LineEditorForm

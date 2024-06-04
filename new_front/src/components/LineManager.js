@@ -13,15 +13,7 @@ const LineManager = ({ lines, setLines, lastLineEnds, setLastLineEnds, endPointS
 
   const handleAddLineClick = () => {
     if (lastLineEnds.length === 0) {
-      // Set the error message if no lines have been added yet
-      setErrorMessage("Please add a line to the canvas first");
-
-      // Clear the error message after 2 seconds
-      setTimeout(() => {
-        setErrorMessage("");
-      }, 2000);
-
-      return;
+      setLastLineEnds([ 50, 450, 150, 450, 90]);
     }
     // Open the modal to add a new line if conditions are met
     setIsModalOpenLineM(true);
@@ -79,7 +71,9 @@ const LineManager = ({ lines, setLines, lastLineEnds, setLastLineEnds, endPointS
   return (
     <>
         
-        <button className="btn btn-outline-dark " onClick={handleAddLineClick}>Добавить линию</button>
+        <button className="btn btn-outline-dark " onClick={handleAddLineClick}>
+        <img src="icons/add.svg" alt="Открыть" />
+        </button>
         {errorMessage && <div className="alert alert-danger">{errorMessage}</div>}
         
       {isModalOpenLineM && (

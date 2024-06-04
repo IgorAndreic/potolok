@@ -83,7 +83,9 @@ const UpdateButton = ({ folderId, blueprintId, blueprintName, lines, shapes }) =
 
     return (
         <>
-            <button className="btn btn-outline-dark mx-1" onClick={handleUpdateClick}>Сохранить</button>
+            <button className="btn btn-outline-dark mx-1" onClick={handleUpdateClick}>
+            <img src="icons/save.svg" alt="Обновить" />  
+            </button>
             {isModalOpen && (
                 <Modal isOpen={isModalOpen} onClose={() => {
                     console.log("Closing modal.");
