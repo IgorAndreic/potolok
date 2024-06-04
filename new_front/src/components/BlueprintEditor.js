@@ -54,7 +54,6 @@ const BlueprintEditor = () => {
   }, [handleMouseDown, selectedShapeId, selectedLineIndex, setSelectedShapeId, setSelectedLine, setSelectedLineIndex]);
 
   const handleMouseUpWrapped = useCallback((e) => {
-    console.log("Mouse up");
     handleMouseUp(e);
   }, [handleMouseUp]);
 
@@ -71,12 +70,11 @@ const BlueprintEditor = () => {
   };
 
   const handleShapeSelect = (id) => {
-    console.log("Shape selected:", id);
     setSelectedShapeId(id);
   };
 
-  const handleAddArrow = () => {addArrow()
-    console.log("Arrow added");
+  const handleAddArrow = () => {
+    addArrow()
   };
 
   const handleUpdateLine = (updatedLine, index) => {

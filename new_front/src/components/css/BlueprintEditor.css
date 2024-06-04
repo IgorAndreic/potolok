@@ -45,3 +45,20 @@ h1 {
   background-color: #343a40;
   color: #fff;
 }
+
+/* Пример CSS для адаптации для мобильных устройств */
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.col-2, .col-10 {
+  width: 100%;
+}
+
+/* Медиа-запрос для устройств с шириной экрана менее 768px (мобильные устройства) */
+@media (max-width: 768px) {
+  .col-2, .col-10 {
+    width: 100%;
+  }
+}
