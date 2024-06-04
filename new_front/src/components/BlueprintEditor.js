@@ -181,23 +181,26 @@ const handleDeleteLine = (index) => {
               lines={lines}
             />
           )}
-          <LineTree lines={lines} onSelectLine={(line, index) => handleLineSelect(line, index)} />
-            <ToolBar 
-              lines={lines} 
-              shapes={shapes}
-              folderId={folderId} 
-              setIsLoaderModalOpen={setIsLoaderModalOpen}
-              blueprintId={blueprintId}
-              blueprintName={blueprintName}
-            />
-            <BlueprintLoaderModal 
-              isOpen={isLoaderModalOpen}
-              onClose={() => setIsLoaderModalOpen(false)} 
-              folderId={folderId}
-              loadBlueprint={loadBlueprint}
-              setLines={setLines}
-              setShapes={setShapes} 
-            />  
+          <LineTree 
+            lines={lines} 
+            onSelectLine={(line, index) => handleLineSelect(line, index)} 
+          />
+          <ToolBar 
+            lines={lines} 
+            shapes={shapes}
+            folderId={folderId} 
+            setIsLoaderModalOpen={setIsLoaderModalOpen}
+            blueprintId={blueprintId}
+            blueprintName={blueprintName}
+          />
+          <BlueprintLoaderModal 
+            isOpen={isLoaderModalOpen}
+            onClose={() => setIsLoaderModalOpen(false)} 
+            folderId={folderId}
+            loadBlueprint={loadBlueprint}
+            setLines={setLines}
+            setShapes={setShapes} 
+          />  
               <Link to="/" className="btn btn-outline-dark mx-1">На главную</Link>
         </div>
         <div className="col-10">
