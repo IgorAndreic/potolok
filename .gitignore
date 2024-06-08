@@ -43,3 +43,5 @@ myvenv/
 *.pyd
 *.pyz
 *.pyw
+
+profil/profil/settings.py

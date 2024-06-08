@@ -89,7 +89,7 @@ WSGI_APPLICATION = 'profil.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'potolokdb',
+        'NAME': 'profildb',
         'USER': 'userdb',
         'PASSWORD': '12345',
         'HOST': 'localhost',
