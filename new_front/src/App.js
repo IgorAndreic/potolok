@@ -12,6 +12,7 @@ import BlueprintOrder from './components/BlueprintOrder';
 import AdminLogin from './components/AdminLogin';
 import AdminRegistration from './components/AdminRegistration';
 import { AuthProvider } from './components/AuthContext';
+import ChatGPTAssistant from './components/ChatGPTAssistant';
 
 function App() {
     return (
@@ -26,6 +27,7 @@ function App() {
                         <Route path="/" element={<FolderList />} exact />
                         <Route path="/editor" element={<BlueprintEditor />} />
                         <Route path="/order" element={<BlueprintOrder />} />
+                        <Route path='/chat' element={<ChatGPTAssistant />} />
                     </Routes>
                 </FolderProvider>
             </div>

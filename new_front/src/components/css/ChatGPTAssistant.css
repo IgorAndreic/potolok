@@ -1,0 +1,77 @@
+/* Включите этот CSS код в ваш основной файл CSS или создайте отдельный CSS файл */
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 20px;
+}
+
+.chat-messages {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.user-message {
+    background-color: #e1ffc7;
+    padding: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+.assistant-message {
+    background-color: #f1f1f1;
+    padding: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+.chat-input {
+    display: flex;
+}
+
+.chat-input textarea {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    resize: none; /* Отключаем изменение размера */
+    overflow-y: auto; /* Добавляем прокрутку по вертикали */
+    max-height: 120px; /* Ограничиваем максимальную высоту */
+}
+
+.chat-input button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.chat-input button:hover {
+    background-color: #0056b3;
+}
+
+.user-message, .assistant-message {
+    padding: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+/* Specific styles for <pre> and <code> elements */
+pre {
+    white-space: pre-wrap; /* Allows text to wrap */
+    margin: 0; /* Remove margin for better alignment */
+}
+
+code {
+    background-color: #f5f5f5; /* Light grey background for code */
+    display: block; /* Makes the <code> element a block, wrapping text correctly */
+    padding: 5px;
+    border-radius: 5px;
+}

@@ -6,6 +6,7 @@ import DeleteFolderModal from './modal/DeleteFolderModal';
 import RenameFolderModal from './modal/RenameFolderModal';
 import FolderTree from './FolderTree';  
 import FolderActions from './FolderActions'; 
+import ImageGenerator from './ImageGenerator';
 import { useAuth } from './AuthContext'; 
 
 const FolderList = () => {
@@ -17,6 +18,7 @@ const FolderList = () => {
   const [renameModalShow, setRenameModalShow] = useState(false);
   const [selectedFolder, setSelectedFolder] = useState({ id: null, name: '' });
   const [parentFolderId, setParentFolderId] = useState(null);
+  const [imageGenerator, setImageGenerator] = useState(false);
   const { isAuthenticated } = useAuth();
   const navigate = useNavigate();
 
@@ -86,6 +88,10 @@ const FolderList = () => {
     setDeleteModalShow(true);
   };
 
+  const togleImgGen = () => {
+    setImageGenerator(!imageGenerator);
+  }
+
   return (
     <div className='container' style={{ minHeight: '100vh' }} onClick={handleContainerClick}>
       <div className="row">
@@ -145,6 +151,15 @@ const FolderList = () => {
           setFolders(updatedFolders);
         }}
       />
+      <div>
+       <button
+              className="btn btn-secondary btn-sm px-4 py-2 mb-3"
+              onClick={() => togleImgGen()}
+              style={{color: "black"}}> 
+              Генератор
+            </button>
+      {imageGenerator && <div ><ImageGenerator /></div>}
+      </div>
     </div>
   );
 };
