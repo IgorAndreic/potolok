@@ -9,6 +9,7 @@ import FolderActions from './FolderActions';
 import BlueprintsTree from './BlueprintsTree';
 import FolderPath from './FolderPath';
 import { useAuth } from './AuthContext';
+import FileTree from './FileTree';
 import './css/FolderContent.css';
 
 const FolderContent = () => {
@@ -135,6 +136,7 @@ const FolderContent = () => {
           contextMenu={contextMenu}
         />
       )}
+      <FileTree folderId={folderId} folderName={folderName} />
       <DeleteFolderModal
         show={deleteModalShow}
         handleClose={closeDeleteModal}

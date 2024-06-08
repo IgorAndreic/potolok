@@ -1,83 +1,37 @@
-.modal-overlay {
- 
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  z-index: 1050;
-  overflow: hidden;
-}
-
 .modal-container {
-  background: white;
-  border-radius: .3rem;
-  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .5);
-  width: 80%;
-  max-width: 300px;
-  padding: 1rem;
-  overflow-y: auto;
-  position: fixed;
-  top: 20px; /* Отступ сверху */
-  right: 20px; /* Отступ справа */
-  z-index: 1050; /* Установите z-index по вашему усмотрению */
-  transition: right 0.3s ease-in-out; /* Плавное появление */
+  width: 90%; /* Уменьшаем ширину для мобильных устройств */
+  max-width: 90%; /* Уменьшаем максимальную ширину для мобильных устройств */
+  padding: 1rem; /* Увеличиваем отступы */
+  top: 50%; /* Позиционируем по вертикали по центру экрана */
+  left: 50%; /* Позиционируем по горизонтали по центру экрана */
+  transform: translate(-50%, -50%); /* Центрируем модальное окно */
+  border-radius: 0; /* Убираем скругления углов */
 }
 
 .close-button {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  border: none;
-  background: none;
-  color: #aaa;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-
-.close-button:hover {
-  color: #777;
-}
-
-.modal-container input[type="text"] {
-  width: 90%;
-  padding: .375rem .75rem;
-  border: 1px solid #ced4da;
-  border-radius: .25rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
-.modal-container button {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: .25rem;
-  padding: .375rem .75rem;
-  cursor: pointer;
-  transition: background-color .15s ease-in-out;
-}
-
-.modal-container button:hover {
-  background-color: #0056b3;
-}
-
-.modal-container .scheme-list-item {
-  cursor: pointer; /* При наведении курсор будет в форме указательной руки */
+  top: 5px; /* Перемещаем кнопку закрытия ближе к верхнему краю */
+  right: 5px; /* Перемещаем кнопку закрытия ближе к правому краю */
 }
 
 .modal-handle {
   padding: 10px;
   background-color: #f0f0f0;
-  border-top-left-radius: .3rem;
-  border-top-right-radius: .3rem;
+  border-radius: 0; /* Убираем скругления углов */
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+/* Добавляем стили для перетаскиваемой области */
+.modal-handle {
+  cursor: move;
 }
 
-input[type=number] {
-  -moz-appearance: textfield;
-  appearance: textfield;
+/* Увеличиваем размер шрифта и отступы элементов внутри модального окна */
+.modal-container input[type="text"] {
+  width: 100%; /* Ширина на 100%, чтобы занимать всю доступную ширину */
+  margin-top: 1.5rem; /* Увеличиваем отступ сверху */
+  margin-bottom: 1.5rem; /* Увеличиваем отступ снизу */
+}
+
+.modal-container button {
+  font-size: 1.2rem; /* Увеличиваем размер шрифта кнопок */
+  padding: 1rem 1.5rem; /* Увеличиваем отступы вокруг текста кнопок */
 }

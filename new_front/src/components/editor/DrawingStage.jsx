@@ -170,6 +170,9 @@ const DrawingStage = ({
         onMouseDown={handleMouseDown}
         onMouseUp={handleMouseUp}
         onMouseMove={handleMouseMove}
+        onTouchStart={handleMouseDown}
+        onTouchMove={handleMouseUp}
+        onTouchEnd={handleMouseMove}
         onMouseLeave={() => {
           setIsPanning(false);
           stageRef.current.container().style.cursor = 'default'; 

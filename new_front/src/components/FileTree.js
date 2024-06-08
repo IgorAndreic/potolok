@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import ContextMenu from './editor/ContextMenu';  // Adjust the path as necessary
+import MediaPlayer from './MediaPlayer';
+import YouTubePlayer from './YouTubePlayer';
 
 const FileTree = ({ folderId, folderName }) => {
   const [files, setFiles] = useState([]);
@@ -65,6 +67,10 @@ const FileTree = ({ folderId, folderName }) => {
       <div className="row">
         <div className="col d-flex justify-content-center">
           <h2 className="mb-3">Файлы</h2>
+          <div>
+          <MediaPlayer src="https://youtube.com/shorts/tvsukG6yqdY?feature=share" type="video" />
+          <YouTubePlayer videoId="tvsukG6yqdY" />
+          </div>
         </div>
         <ul>
           {files.length > 0 ? files.map(file => (
